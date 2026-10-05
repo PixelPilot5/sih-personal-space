@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
-from models import Simulation
-from database import session, engine
-import database_models
+# from models import Simulation
+# from database import session, engine
+# import database_models
 # pyrefly: ignore [missing-import]
 import ee
 
@@ -335,4 +335,4 @@ def compute_live_gee_metrics(
             "agricultural_loss": f"₹ {loss:,.2f} Cr",
             "critical_infrastructure": f"{infra:,} Structures"
         }
-    }
+    }
