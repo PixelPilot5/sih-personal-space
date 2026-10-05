@@ -174,7 +174,7 @@ DAM_LOCATIONS = {
     'Mullaperiyar Dam (Kerala)': {'bbox': [77.00, 9.45, 77.22, 9.58], 'center': [9.53, 77.16], 'zoom': 12},
     'Idukki Dam (Kerala)': {'bbox': [76.80, 9.75, 77.05, 9.92], 'center': [9.85, 76.97], 'zoom': 12},
     'Mettur Dam (Tamil Nadu)': {'bbox': [77.65, 11.65, 77.95, 11.95], 'center': [11.80, 77.80], 'zoom': 11},
-    'Bhavanisagar Dam (Tamil Nadu)': {'bbox': [76.95, 11.35, 77.30, 11.60], 'center': [11.47, 76.14], 'zoom': 11}
+    'Bhavanisagar Dam (Tamil Nadu)': {'bbox': [76.95, 11.35, 77.30, 11.60], 'center': [11.47, 77.14], 'zoom': 11}
 }
 
 
