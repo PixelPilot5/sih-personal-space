@@ -1,5 +1,3 @@
-// FloodSim-Frontend/js/simulation.js
-
 let currentStep = 1;
 const totalSteps = 4;
 let activeMode = "preset"; // "preset" | "custom"
@@ -612,6 +610,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   populateStates();
+
+  // If the URL has ?dam=<id> (e.g. from the Home page map), preselect that dam
+  // by walking the cascading dropdowns: state > district > river > dam.
+  const preId = new URLSearchParams(window.location.search).get("dam");
+  const pre = DAM_PRESETS.find((d) => d.id === preId);
+  if (pre) {
+    stateSelect.value = pre.state;
+    stateSelect.dispatchEvent(new Event("change")); // fills the district list
+    districtSelect.value = pre.district;
+    districtSelect.dispatchEvent(new Event("change")); // fills the river list
+    riverSelect.value = pre.river;
+    riverSelect.dispatchEvent(new Event("change")); // fills the dam list
+    damSelect.value = pre.id;
+  }
 
   // Navigation Buttons
   document.getElementById("next").addEventListener("click", () => {
